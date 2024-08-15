@@ -1,10 +1,16 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
-<% if (user) { %>
+    <main>
+        <% if (user) { %>
    
-    <form action="/goals">
-      <button type="submit">Check my goals list</button>
-    </form>
+        <form action="/goals">
+         <button type="submit">Check my goals list</button>
+        </form>
 
-  <% } %>
+         <% } else{ %>
+            <h1>Sign In to Manage Your Goals</h1>
+            <img src="../images/goal.jpeg" alt="goals">
+
+        <%}%>
+    </main>
 <%- include('./partials/footer') %>
