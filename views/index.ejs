@@ -1,3 +1,10 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
+<% if (user) { %>
+   
+    <form action="/goals">
+      <button type="submit">Check my goals list</button>
+    </form>
+
+  <% } %>
 <%- include('./partials/footer') %>

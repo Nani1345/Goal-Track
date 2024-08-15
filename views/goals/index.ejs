@@ -1,0 +1,42 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+    <h1>Goals List</h1>
+    <table id="list">
+      <thead>    
+        <tr>   
+          <th>Category</th>
+          <th>Name</th>
+          <th>StartDateTime</th>
+          <th>EndDateTime</th>
+          <th>Priority</th>
+          <th>Completed</th>
+          <th></th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% goals.forEach((goal) => { %>
+        <tr>
+          <td><%= goal.category %></td>
+          <td><%= goal.name %></td>
+          <td><%= goal.startDateTime %></td>
+          <td><%= goal.endDateTime %></td>
+          <td><%= goal.priority %></td>
+          <td><%= goal.completed %></td>
+          <td><a href="/goals/<%= flight._id %>">DETAILS</a></td>
+          <td>
+            <form 
+              action="/goals/<%= flight._id %>?_method=DELETE" method="POST"
+            >
+              <button type="submit">X</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </main>
+
+<%- include('../partials/footer') %>
