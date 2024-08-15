@@ -1,0 +1,40 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<h1><%= title %></h1>
+<form id="new-form" action="/goals" method="POST">
+    <label for="category">Category:</label>
+    <select name="category" id="category">
+        <option value="work">Work</option>
+        <option value="study">Study</option>
+        <option value="travel">Travel</option>
+        <option value="fitness">Fitness</option>
+    </select>
+
+    <label for="name">Name:</label>
+    <input type="tel" name="name" id="name">
+
+    <label for="startDateTime">Start-Date-Time:</label>
+    <input type="date" name="startDateTime" id="startDateTime">
+
+    <label for="endDateTime">End-Date-Time:</label>
+    <input type="date" name="endDateTime" id="endDateTime">
+
+    <label for="description">Description:</label>
+    <textarea name="description" cols="50" placeholder="Enter your description" id="description"></textarea>
+
+    
+    <label for="priority ">Priority:</label>
+    <select name="priority" id="priority">
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">hign</option>
+        <option value="urgent">urgent</option>
+    </select>
+
+    <label>Completed? <input type="checkbox" name="completed"></label>
+    <button type="submit">Add Goal</button>
+  
+</form>
+</main>
+<%- include('../partials/footer') %>

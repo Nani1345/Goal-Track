@@ -12,6 +12,52 @@ async function index(req, res) {
   }
 }
 
+async function newGoals(req, res) {
+    try {
+      
+        req.body.completed = !!req.body.completed
+        req.body.owner = req.session.user._id  
+        const goals = await Goal.find({})
+        res.render('goals/new', {
+        title: 'Add Goals',
+        goals,
+      })
+    } catch (error) {
+      console.log(error)
+      res.redirect('/goals')
+    }
+  }
+
+async function create(req, res) {
+    try {
+
+        req.body.completed = !!req.body.completed
+        req.body.owner = req.session.user._id
+        await Goal.create(req.body)
+        res.redirect('/goals')    
+    } catch (error) {
+        console.log(error)
+        res.redirect('/goals')
+    }
+  }
+
+  async function show(req, res) {
+    try {
+        req.body.owner = req.session.user._id
+      const goal = await Goal.findById(req.params.goalId)
+      .populate(['note', 'notes.content'])
+      res.render('goals/show', {
+        taco
+      })
+    } catch (error) {
+      console.log(error)
+      res.redirect('/goals')
+    }
+  }
+
 export {
-  index
+  index,
+  newGoals as new,
+  create,
+  show
 }

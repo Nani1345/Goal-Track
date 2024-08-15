@@ -2,7 +2,10 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <h1>Goals List</h1>
+    <section>
+
+        
+    </section>
     <table id="list">
       <thead>    
         <tr>   
@@ -25,10 +28,10 @@
           <td><%= goal.endDateTime %></td>
           <td><%= goal.priority %></td>
           <td><%= goal.completed %></td>
-          <td><a href="/goals/<%= flight._id %>">DETAILS</a></td>
+          <td><a href="/goals/<%= goal._id %>">DETAILS</a></td>
           <td>
             <form 
-              action="/goals/<%= flight._id %>?_method=DELETE" method="POST"
+              action="/goals/<%= goal._id %>?_method=DELETE" method="POST"
             >
               <button type="submit">X</button>
             </form>
@@ -37,6 +40,10 @@
         <% }) %>
       </tbody>
     </table>
+    
+    <form action="/goals/new" >
+        <button type="submit">Add Goals</button>
+      </form>
   </main>
 
 <%- include('../partials/footer') %>
