@@ -8,8 +8,9 @@ const router = Router()
 router.get('/', goalsCtrl.index)
 router.get('/new', isSignedIn, goalsCtrl.new)
 router.post('/', isSignedIn, goalsCtrl.create)
-router.get('/:flightId', isSignedIn, goalsCtrl.show)
+router.get('/:goalId', isSignedIn, goalsCtrl.show)
 router.delete('/:goalId', isSignedIn, goalsCtrl.delete)
+router.get('/:goalId/edit', isSignedIn, goalsCtrl.edit)
 
 
 

@@ -58,12 +58,25 @@ async function create(req, res) {
   async function deleteGoal(req, res) {
     try {
       const goal = await Goal.findById(req.params.goalId)
-    //   if (taco.owner.equals(req.session.user._id)) {
+    //   if (goal.owner.equals(req.session.user._id)) {
         await goal.deleteOne()
         res.redirect('/goals')
     //   } else {
     //     throw new Error(`🚫 Not authorized 🚫`)
     //   }
+    } catch (error) {
+      console.log(error)
+      res.redirect('/goals')
+    }
+  }
+
+
+  async function edit(req, res) {
+    try {
+      const goal = await Goal.findById(req.params.goalId)
+      res.render('goals/edit', {
+        goal
+      })
     } catch (error) {
       console.log(error)
       res.redirect('/goals')
@@ -78,5 +91,6 @@ export {
   create,
   show,
   deleteGoal as delete,
+  edit,
 
 }
