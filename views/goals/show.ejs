@@ -1,5 +1,5 @@
-<%- include('../partials/footer') %>
 <%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
 
 <main>
     <h1>Goal's details</h1>
@@ -8,6 +8,12 @@
 
     <div>Name: </div>
     <div><%=goal.name %></div>
+    
+    <form 
+        action="/goals/<%= goal._id %>/edit" 
+    >
+         <button class="btn">✏️</button>
+    </form>
 
     <div>StartDateTime: </div>
     <div><%=goal.startDateTime %></div>
@@ -27,4 +33,4 @@
 </main>
 
 
-<%- include('../partials/nav') %>
+<%- include('../partials/footer') %>

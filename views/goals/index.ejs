@@ -13,7 +13,7 @@
           <th>Priority</th>
           <th>Completed</th>
           <th></th>
-          <th>Edit</th>
+       
           <th>Delete</th>
         </tr>
       </thead>
@@ -27,13 +27,7 @@
           <td><%= goal.priority %></td>
           <td><%= goal.completed %></td>
           <td><a href="/goals/<%= goal._id %>">DETAILS</a></td>
-          <td>
-            <form 
-              action="/goals/<%= goal._id %>/edit" 
-            >
-              <button class="btn">✏️</button>
-            </form>
-          </td>
+         
           <td>
             <form 
               action="/goals/<%= goal._id %>?_method=DELETE" method="POST"
