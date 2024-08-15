@@ -12,7 +12,7 @@ router.get('/:goalId', isSignedIn, goalsCtrl.show)
 router.delete('/:goalId', isSignedIn, goalsCtrl.delete)
 router.get('/:goalId/edit', isSignedIn, goalsCtrl.edit)
 router.put('/:goalId', isSignedIn, goalsCtrl.update)
-router.post('/:goalId/note', isSignedIn, goalsCtrl.addNote)
+router.post('/:goalId/notes', isSignedIn, goalsCtrl.addNote)
 
 
 

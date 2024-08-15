@@ -105,7 +105,7 @@ async function addNote(req, res){
     try {
         const goal = await Goal.findById(req.params.goalId)
         req.body.author = req.session.user._id
-        goal.note.push(req.body)
+        goal.notes.push(req.body)
         await goal.save()
         res.redirect(`/goals/${goal._id}`)
     } catch (error) {

@@ -17,7 +17,7 @@ const goalSchema = new Schema({
   priority: {type: String, enum: ['low', 'medium', 'high', 'urgent']},
   completed: Boolean,
   owner:{type:Schema.Types.ObjectId, ref:'User'},
-  note: [noteSchema]
+  notes: [noteSchema]
 }, {
   timestamps: true
 })
