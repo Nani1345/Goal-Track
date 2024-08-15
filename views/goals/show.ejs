@@ -6,14 +6,17 @@
 
    
 
-    <div>Name: </div>
-    <div><%=goal.name %></div>
+    <div>Category: </div>
+    <div><%=goal.category %></div>
     
     <form 
         action="/goals/<%= goal._id %>/edit" 
     >
          <button class="btn">✏️</button>
     </form>
+
+    <div>Name: </div>
+    <div><%=goal.name %></div>
 
     <div>StartDateTime: </div>
     <div><%=goal.startDateTime %></div>
