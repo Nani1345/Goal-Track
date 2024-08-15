@@ -33,6 +33,24 @@
     <div>Description: </div>
     <div><%=goal.description %></div>
 
+    <div>Note: </div>
+    <!-- <div><%=goal.note.content %></div> -->
+    
+
+    <ul>
+        <% goal.note?.forEach(noteE => { %>
+          <li>
+            <%= noteE.content %>
+          </li> 
+        <% }) %>
+    </ul>
+
+    <form action="/goals/<%= goal._id %>/note" method="POST" id="add note">
+      
+        <textarea name="content" id="content"></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+
 </main>
 
 

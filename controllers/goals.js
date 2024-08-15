@@ -101,6 +101,20 @@ async function create(req, res) {
   }
   
 
+async function addNote(req, res){
+    try {
+        const goal = await Goal.findById(req.params.goalId)
+        req.body.author = req.session.user._id
+        goal.note.push(req.body)
+        await goal.save()
+        res.redirect(`/goals/${goal._id}`)
+    } catch (error) {
+        console.log(error)
+        res.redirect('/goals')
+    }  
+}
+
+
 export {
   index,
   newGoals as new,
@@ -108,5 +122,6 @@ export {
   show,
   deleteGoal as delete,
   edit,
-  update
+  update,
+  addNote
 }
