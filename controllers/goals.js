@@ -43,11 +43,11 @@ async function create(req, res) {
 
   async function show(req, res) {
     try {
-        req.body.owner = req.session.user._id
+        // req.body.owner = req.session.user._id
       const goal = await Goal.findById(req.params.goalId)
-      .populate(['note', 'notes.content'])
+    //   .populate(['note', 'notes.content'])
       res.render('goals/show', {
-        taco
+        goal
       })
     } catch (error) {
       console.log(error)
@@ -55,9 +55,28 @@ async function create(req, res) {
     }
   }
 
+  async function deleteGoal(req, res) {
+    try {
+      const goal = await Goal.findById(req.params.goalId)
+    //   if (taco.owner.equals(req.session.user._id)) {
+        await goal.deleteOne()
+        res.redirect('/goals')
+    //   } else {
+    //     throw new Error(`🚫 Not authorized 🚫`)
+    //   }
+    } catch (error) {
+      console.log(error)
+      res.redirect('/goals')
+    }
+  }
+
+  
+
 export {
   index,
   newGoals as new,
   create,
-  show
+  show,
+  deleteGoal as delete,
+
 }

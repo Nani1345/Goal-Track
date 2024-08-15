@@ -11,8 +11,8 @@ const noteSchema = new Schema({
 const goalSchema = new Schema({
   category:{type: String, enum:['work', 'study', 'travel', 'fitness']},
   name: String,
-  startDataTime: Date,
-  endDataTime: Date,
+  startDateTime: Date,
+  endDateTime: Date,
   description: String,
   priority: {type: String, enum: ['low', 'medium', 'high', 'urgent']},
   completed: Boolean,
