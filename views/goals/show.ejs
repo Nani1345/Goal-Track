@@ -1,55 +1,74 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/goals/show.css">
 <%- include('../partials/nav') %>
 
-<main>
+<div class="box">
+  <div class="formDetails">
     <h1>Goal's details</h1>
-
-    <div>Category: </div>
-    <div><%=goal.category %></div>
+    <div id="detail">
+      <div><b>Category:&nbsp;&nbsp;</b></div>
+      <div><%= goal.category %></div>
     
-    <form 
-        action="/goals/<%= goal._id %>/edit" 
-    >
-         <button class="btn">✏️</button>
-    </form>
-
-    <div>Name: </div>
-    <div><%=goal.name %></div>
-
-    <div>StartDateTime: </div>
-    <div><%=goal.startDateTime %></div>
-
-    <div>EndDateTime: </div>
-    <div><%=goal.endDateTime %></div>
-
-    <div>Priority: </div>
-    <div><%=goal.priority %></div>
-
-    <div>Completed: </div>
-    <div><%=goal.completed %></div>
-
-    <div>Description: </div>
-    <div><%=goal.description %></div>
-
-    <div>Notes: </div>
- 
-    
-
-    <ul>
-        <% goal.notes?.forEach(note => { %>
-          <li>
-            <%= note.content %>
-          </li> 
-        <% }) %>
-    </ul>
-
-    <form action="/goals/<%= goal._id %>/notes" method="POST" id="add notes">
+      <form 
+          action="/goals/<%= goal._id %>/edit" 
+      >
+          <button class="btn">✏️</button>
+      </form>
+    </div>
+    <div id="detail">
+      <div><b>Name:&nbsp;&nbsp;</b></div>
+      <div><%=goal.name %></div>
+    </div>
+    <div id="detail">
+      <div><b>StartDateTime: &nbsp;&nbsp;</b></div>
+      <%function formatDate(date) {
+        const d = new Date(date);
+        const month = d.getMonth() + 1; 
+        const day = d.getDate();
+        const year = d.getFullYear().toString(); 
+        return `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year}`;}
+        const formattedStartDate = formatDate(goal.startDateTime)
+        const formattedEndDate = formatDate(goal.endDateTime)
+      %>
+      <div><%=formattedStartDate %></div>
+    </div>
+    <div id="detail">
+      <div><b>EndDateTime: &nbsp;&nbsp;</b></div>
       
-        <textarea name="content" id="content"></textarea>
-        <button type="submit">Add Notes</button>
-    </form>
+      <div><%=formattedEndDate %></div>
+    </div>
+    <div id="detail">
+      <div><b>Priority: &nbsp;&nbsp;</b></div>
+      <div><%=goal.priority %></div>
+    </div>
+    <div id="detail">
+      <div><b>Completed: &nbsp;&nbsp;</b></div>
+      <div><%=goal.completed %></div>
+    </div>
+    <div id="detail">
+      <div><b>Description: &nbsp;&nbsp;</b></div>
+      <div><%=goal.description %></div>
+    </div>
+    <div id="detail">
+      <div><b>Notes: </b></div>
+      <ul>
+          <% goal.notes?.forEach(note => { %>
+            <li>
+              <%= note.content %>
+            </li> 
+          <% }) %>
+      </ul>
+    </div>
 
-</main>
+    <div id="detail">
+      <form action="/goals/<%= goal._id %>/notes" method="POST" id="add notes">
+        
+          <textarea name="content" id="content"></textarea>
+          <button type="submit">Add Notes</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 
 <%- include('../partials/footer') %>

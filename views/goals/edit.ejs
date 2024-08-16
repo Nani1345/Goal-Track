@@ -1,29 +1,38 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/goals/edit.css">
 <%- include('../partials/nav') %>
 
-<section>
+<section class="box">
     <h1>Edit Goals</h1>
     <form action="/goals/<%= goal._id %>?_method=PUT" method="POST">
-        <label for="category">Category:</label>
-        <input type="tex" name="category" id="category" value ='<%=goal.category%>'>
-
-        <label for="name">Name:</label>
-        <input type="tex" name="name" id="name" value ='<%=goal.name%>'>
-
-        <label for="startDateTime">StartDateTime:</label>
-        <input type="date" name="startDateTime" id="startDateTime" value ='<%=goal.startDateTime%>'>
-
-        <label for="endDateTime">StartDateTime:</label>
-        <input type="date" name="endDateTime" id="endDateTime" value ='<%=goal.endDateTime%>'>
-        
-        <label for="priority">priority:</label>
-        <input type="tex" name="priority" id="priority" value ='<%=goal.priority%>'>
-
-        <label for="description">Description:</label>
-        <input type="tex" name="description" id="description" value ='<%=goal.description%>'>
-
-        <label for="completed">Completed:</label>
-        <input type="checkbox" name="completed" <%= goal.completed ? "checked" : "" %> >
+        <div>
+            <label for="category">Category:</label>
+            <input type="tex" name="category" id="category" value ='<%=goal.category%>'>
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="tex" name="name" id="name" value ='<%=goal.name%>'>
+        </div>
+        <div>
+            <label for="startDateTime">StartDateTime:</label>
+            <input type="date" name="startDateTime" id="startDateTime" value ='<%=goal.startDateTime%>'>
+        </div>
+        <div>
+            <label for="endDateTime">StartDateTime:</label>
+            <input type="date" name="endDateTime" id="endDateTime" value ='<%=goal.endDateTime%>'>
+        </div>
+        <div>
+            <label for="priority">priority:</label>
+            <input type="tex" name="priority" id="priority" value ='<%=goal.priority%>'>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <input type="tex" name="description" id="description" value ='<%=goal.description%>'>
+        </div>
+        <div>
+            <label for="completed">Completed:</label>
+            <input type="checkbox" name="completed" <%= goal.completed ? "checked" : "" %> >
+        </div>
         <button type="submit">Submit</button>
 
 

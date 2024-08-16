@@ -6,7 +6,7 @@ table {
 
   table thead th {
     padding: 20px;
-    background-color: #FFE4C4;
+    background-color: #FFD700;
 
   }
   
@@ -24,11 +24,12 @@ table {
   
   
   
-  tr:hover {background-color: #FFE4C4;}
+  tr:hover {background-color:#FFD700;}
 
  #delete{
     width: 10px;
     background-color: transparent;
     border: none;
  } 
+
 
