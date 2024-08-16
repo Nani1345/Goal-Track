@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/goals/index.css">
 <%- include('../partials/nav') %>
 
 <main>
@@ -9,30 +10,41 @@
           <th>Category</th>
           <th>Name</th>
           <th>StartDateTime</th>
+
+          
+
           <th>EndDateTime</th>
           <th>Priority</th>
           <th>Completed</th>
-          <th></th>
-       
+          <th>Details</th>
           <th>Delete</th>
         </tr>
       </thead>
       <tbody>
         <% goals.forEach((goal) => { %>
+          <%function formatDate(date) {
+            const d = new Date(date);
+            const month = d.getMonth() + 1; 
+            const day = d.getDate();
+            const year = d.getFullYear().toString(); 
+            return `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year}`;}
+            const formattedStartDate = formatDate(goal.startDateTime)
+            const formattedEndDate = formatDate(goal.endDateTime)
+          %>
         <tr>
           <td><%= goal.category %></td>
           <td><%= goal.name %></td>
-          <td><%= goal.startDateTime %></td>
-          <td><%= goal.endDateTime %></td>
+          <td><%= formattedStartDate%></td>
+          <td><%= formattedEndDate %></td>
           <td><%= goal.priority %></td>
           <td><%= goal.completed %></td>
-          <td><a href="/goals/<%= goal._id %>">DETAILS</a></td>
+          <td><a href="/goals/<%= goal._id %>">🔍</a></td>
          
           <td>
             <form 
-              action="/goals/<%= goal._id %>?_method=DELETE" method="POST"
+              action="/goals/<%= goal._id %>?_method=DELETE " method="POST"
             >
-              <button type="submit">🗑️</button>
+              <button type="submit" id="delete">🗑️</button>
             </form>
           </td>
         </tr>

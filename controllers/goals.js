@@ -5,6 +5,7 @@ async function index(req, res) {
     const goals = await Goal.find({})
     req.body.owner = req.session.user._id
     req.body.completed = !!req.body.completed 
+    
     res.render('goals/index', {
         goals
     })

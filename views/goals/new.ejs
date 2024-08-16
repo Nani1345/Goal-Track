@@ -1,40 +1,56 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/goals/new.css">
 <%- include('../partials/nav') %>
-
-<h1><%= title %></h1>
-<form id="new-form" action="/goals" method="POST">
-    <label for="category">Category:</label>
-    <select name="category" id="category">
-        <option value="work">work</option>
-        <option value="study">study</option>
-        <option value="travel">travel</option>
-        <option value="fitness">fitness</option>
-    </select>
-
-    <label for="name">Name:</label>
-    <input type="tel" name="name" id="name">
-
-    <label for="startDateTime">Start-Date-Time:</label>
-    <input type="date" name="startDateTime" id="startDateTime">
-
-    <label for="endDateTime">End-Date-Time:</label>
-    <input type="date" name="endDateTime" id="endDateTime">
-
-    <label for="description">Description:</label>
-    <textarea name="description" cols="50" placeholder="Enter your description" id="description"></textarea>
-
     
-    <label for="priority ">Priority:</label>
-    <select name="priority" id="priority">
-        <option value="low">low</option>
-        <option value="medium">medium</option>
-        <option value="high">hign</option>
-        <option value="urgent">urgent</option>
-    </select>
 
-    <label>Completed? <input type="checkbox" name="completed"></label>
-    <button type="submit">Add Goal</button>
-  
-</form>
-</main>
+<div class="box">
+    
+    <form id="new-form" action="/goals" method="POST">
+        <h1><%= title %></h1>
+        <div>
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                <option value="work">work</option>
+                <option value="study">study</option>
+                <option value="travel">travel</option>
+                <option value="fitness">fitness</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="name">Name:</label>
+            <input type="tel" name="name" id="name">
+        </div>
+
+        <div>
+            <label for="startDateTime">Start-Date-Time:</label>
+            <input type="date" name="startDateTime" id="startDateTime">
+        </div>
+
+        <div>
+            <label for="endDateTime">End-Date-Time:</label>
+            <input type="date" name="endDateTime" id="endDateTime">
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <textarea name="description" cols="50" placeholder="Enter your description" id="description"></textarea>
+        </div>
+
+        <div>   
+            <label for="priority ">Priority:</label>
+            <select name="priority" id="priority">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">hign</option>
+                <option value="urgent">urgent</option>
+            </select>
+        </div> 
+
+        <div> 
+            <label>Completed? <input type="checkbox" name="completed"></label>
+            <button type="submit">Add Goal</button>
+        </div>  
+    </form>
+</box>
 <%- include('../partials/footer') %>
