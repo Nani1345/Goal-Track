@@ -1,5 +1,5 @@
 # Goal Track Application Screenshot
-<img src = './images/screenshot.png' alt = 'application screenshot' width = '450'>
+<img src = '../images/screenshot.png' alt = 'application screenshot' width = '450'>
 
 # Goal Track Application Introduction
 This application is designed to help users effectively track their goals. It enables users to set, manage, and monitor their goals across various aspects of their lives, including work, study, fitness, and travel.
@@ -9,8 +9,8 @@ This application is designed to help users effectively track their goals. It ena
 * [Application planning](https://trello.com/b/jk9kkcgq/unit-2-project-planning)
 
 # Attributions
-* pixabay wardencat -- My web icon is from pixabay wardencat（ myhttps://pixabay.com/zh/illustrations/light-icon-badge-2692347/）
-* pixabay Peggy_Marco--My Home page image is from pixabay Peggy_Marco（ https://pixabay.com/zh/illustrations/direction-path-decision-goal-2320124/）
+* pixabay wardencat -- My web icon is from pixabay wardencat（https://pixabay.com/zh/illustrations/light-icon-badge-2692347/）
+* pixabay Peggy_Marco--My Home page image is from pixabay Peggy_Marco（https://pixabay.com/zh/illustrations/direction-path-decision-goal-2320124/）
 * pixabay Mohamed_hassan_ My Home page image is from pixabay Mohamed_hassan（https://pixabay.com/zh/vectors/target-achievement-goal-focus-7699762/ ）
 
 # Technologies Used
