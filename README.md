@@ -1,63 +1,29 @@
-# MEN Stack with Session Auth Template
+# Goal Track Application Screenshot
+<img src = './images/screenshot.png' alt = 'application screenshot' width = '450'>
 
-This is a MEN Stack session auth template.
+# Goal Track Application Introduction
+This application is designed to help users effectively track their goals. It enables users to set, manage, and monitor their goals across various aspects of their lives, including work, study, fitness, and travel.
 
-Use this to go build things! 🚀
+# webpage 
+* [Heroku deployment](https://nani-app-bada8d1b7e82.herokuapp.com/)
+* [Application planning](https://trello.com/b/jk9kkcgq/unit-2-project-planning)
 
-## To Use This Template
+# Attributions
+* pixabay wardencat -- My web icon is from pixabay wardencat（ myhttps://pixabay.com/zh/illustrations/light-icon-badge-2692347/）
+* pixabay Peggy_Marco--My Home page image is from pixabay Peggy_Marco（ https://pixabay.com/zh/illustrations/direction-path-decision-goal-2320124/）
+* pixabay Mohamed_hassan_ My Home page image is from pixabay Mohamed_hassan（https://pixabay.com/zh/vectors/target-achievement-goal-focus-7699762/ ）
 
-__Replace `<name-of-your-app-here>` (including the `<` and `>`) in the commands below with the name of your app!__
+# Technologies Used
+![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) 
+![NODE.JS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![EXPRESS.JS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![GITHUB](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![HEROKU](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
-```bash
-git clone https://github.com/SEI-Remote/men-stack-session-auth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
 
-Once you are in the project directory:
 
-```bash
-rm -rf .git
-```
-
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
-
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
-
-Re-initialize a git repository:
-
-```bash
-git init
-```
-
-Create a repo for this project on GitHub and add that remote to your project with `git remote add origin Your-repo-URL-here`.
-
-Run npm i to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL` and `SESSION_SECRET` with values that you provide.
-
-Delete this `README.md` file and finally, make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push origin main
-```
-
-You're done!
+# Next Steps:
+* On the goal list page, add category tags. For example, if the user selects "travel," only the content related to travel should be displayed in the table.
+*  On the goal list page, On the goal list page, add a sorting feature by date. Goals should be able to be sorted in ascending or descending order based on the start date.
