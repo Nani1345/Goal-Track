@@ -18,7 +18,7 @@
             <input type="date" name="startDateTime" id="startDateTime" value ='<%=goal.startDateTime%>'>
         </div>
         <div>
-            <label for="endDateTime">StartDateTime:</label>
+            <label for="endDateTime">EndDateTime:</label>
             <input type="date" name="endDateTime" id="endDateTime" value ='<%=goal.endDateTime%>'>
         </div>
         <div>
@@ -27,7 +27,14 @@
         </div>
         <div>
             <label for="description">Description:</label>
-            <input type="tex" name="description" id="description" value ='<%=goal.description%>'>
+            <!-- <input type="tex" name="description" id="description" value ='<%=goal.description%>'>
+              -->
+              <select name="priority" id="priority" >
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">hign</option>
+                <option value="urgent">urgent</option>
+            </select>
         </div>
         <div>
             <label for="completed">Completed:</label>

@@ -30,3 +30,4 @@ This application is designed to help users effectively track their goals. It ena
 # Next Steps:
 * On the goal list page, add category tags. For example, if the user selects "travel," only the content related to travel should be displayed in the table.
 *  On the goal list page, add a sorting feature by date. Goals should be able to be sorted in ascending or descending order based on the start date.
+* Improve the UI of this application.
