@@ -7,7 +7,15 @@
     <form action="/goals/<%= goal._id %>?_method=PUT" method="POST">
         <div>
             <label for="category">Category:</label>
-            <input type="tex" name="category" id="category" value ='<%=goal.category%>'>
+            <!-- <input type="tex" name="category" id="category" value ='<%=goal.category%>'> -->
+
+            <select name="category" id="category" value ='<%=goal.category%>'>
+                <option value="work" <%= goal.category === 'work' ? 'selected' : '' %>>work</option>
+                <option value="study" <%= goal.category === 'study' ? 'selected' : '' %>>study</option>
+                <option value="travel" <%= goal.category === 'travel' ? 'selected' : '' %>>travel</option>
+                <option value="fitness" <%= goal.category === 'fitness' ? 'selected' : '' %>>fitness</option>
+            </select>
+
         </div>
         <div>
             <label for="name">Name:</label>
@@ -18,16 +26,28 @@
             <input type="date" name="startDateTime" id="startDateTime" value ='<%=goal.startDateTime%>'>
         </div>
         <div>
-            <label for="endDateTime">StartDateTime:</label>
+            <label for="endDateTime">EndDateTime:</label>
             <input type="date" name="endDateTime" id="endDateTime" value ='<%=goal.endDateTime%>'>
         </div>
         <div>
             <label for="priority">priority:</label>
-            <input type="tex" name="priority" id="priority" value ='<%=goal.priority%>'>
+            <!-- <input type="tex" name="priority" id="priority" value ='<%=goal.priority%>'> -->
+
+            <select name="priority" id="priority" value ='<%=goal.priority%>'>
+                <option value="low" <%= goal.priority === 'low' ? 'selected' : '' %>>low</option>
+                <option value="medium" <%= goal.priority === 'medium' ? 'selected' : '' %>>medium</option>
+                <option value="high" <%= goal.priority === 'high' ? 'selected' : '' %>>high</option>
+                <option value="urgent" <%= goal.priority === 'urgent' ? 'selected' : '' %>>urgent</option>
+            </select>
+           
+
         </div>
         <div>
             <label for="description">Description:</label>
             <input type="tex" name="description" id="description" value ='<%=goal.description%>'>
+             
+            
+            
         </div>
         <div>
             <label for="completed">Completed:</label>
