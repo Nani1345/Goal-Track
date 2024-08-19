@@ -1,5 +1,5 @@
-# Goal Track Application Screenshot
-<img src = '../images/screenshot.png' alt = 'application screenshot' width = '450'>
+# Goals Track Application
+<img src = './public/images/screenshot.png' alt = 'application screenshot' width = '450'>
 
 # Goal Track Application Introduction
 This application is designed to help users effectively track their goals. It enables users to set, manage, and monitor their goals across various aspects of their lives, including work, study, fitness, and travel.
