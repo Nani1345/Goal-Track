@@ -32,4 +32,20 @@ table {
     border: none;
  } 
 
+ #btn * {
+    width: 300px;
+    height: 60px;
+    font-size: 22px;
+    background-color: #FFD700;
+    color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+  
+}
+
+
+
+
+
+
 

@@ -2,7 +2,7 @@ import { Goal } from '../models/goal.js'
 
 async function index(req, res) {
   try {
-    const goals = await Goal.find({})
+    const goals = await Goal.find({owner: req.session.user._id})
     req.body.owner = req.session.user._id
     req.body.completed = !!req.body.completed 
     

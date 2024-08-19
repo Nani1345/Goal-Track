@@ -6,7 +6,7 @@
   <div class="formDetails">
     <h1>Goal's details</h1>
     <div id="detail">
-      <div><b>Category:&nbsp;&nbsp;</b></div>
+      <div><b>Category:&nbsp;&nbsp;&nbsp;</b></div>
       <div><%= goal.category %></div>
     
       <form 
@@ -64,7 +64,7 @@
       <form action="/goals/<%= goal._id %>/notes" method="POST" id="add notes">
         
           <textarea name="content" id="content"></textarea>
-          <button type="submit">Add Notes</button>
+          <button type="submit" id="addButton">Add Notes</button>
       </form>
     </div>
   </div>
